@@ -1,0 +1,11 @@
+[project]
+name = "pdfimageextractor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dash>=2.18.2",
+    "dash-extensions>=1.0.19",
+    "pypdf[image]>=5.2.0",
+]
