@@ -1,7 +1,7 @@
 import base64
 import io
 from pathlib import Path
-
+from urllib.parse import quote
 from dash import Dash, dcc
 from dash_extensions.enrich import (
     Input,
@@ -142,9 +142,9 @@ def upload_file(content, filename):
     return [
         html.A(
             [
-                html.Img(src=f"/static/{image_url}", style=style["image"]),
+                html.Img(src=quote(f"/static/{image_url}"), style=style["image"]),
             ],
-            href=f"/static/{image_url}",
+            href=quote(f"/static/{image_url}"),
             target="_blank",
             title=image_url.name,
         )
